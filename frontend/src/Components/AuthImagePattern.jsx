@@ -1,19 +1,16 @@
-const AuthImagePattern = ({ title, subtitle }) => {
+import Appabanner from "../../public/Appabanner.png";
+
+const AuthImagePattern = () => {
   return (
-    <div className="hidden lg:flex items-center justify-center bg-base-200 p-12">
-      <div className="max-w-md text-center">
-        <div className="grid grid-cols-3 gap-3 mb-8">
-          {[...Array(9)].map((_, i) => (
-            <div
-              key={i}
-              className={`aspect-square rounded-2xl bg-primary/10 ${
-                i % 2 === 0 ? "animate-pulse" : ""
-              }`}
-            />
-          ))}
-        </div>
-        <h2 className="text-2xl font-bold mb-4">{title}</h2>
-        <p className="text-base-content/60">{subtitle}</p>
+    <div className="w-full h-full relative ">
+      <img
+        src={Appabanner}
+        alt="Appabanner"
+        className="  w-5xl h-120 object-cover rounded-2xl mt-20 mr-32"
+      />
+      <div className="absolute inset-0 flex flex-col justify-center items-center text-black px-9 text-center mt-130">
+        <h2 className="text-3xl font-bold mb-4">Welcome back!</h2>
+        <p className="text-xl">Sign in to continue your conversations and connect.</p>
       </div>
     </div>
   );
